@@ -257,6 +257,7 @@ const handlePlantsClick = (e) => {
    const handleContinueShopping = (e) => {
     e.preventDefault();
     setShowCart(false);
+    setShowPlants(true);
   };
     return (
         <div>
@@ -302,7 +303,7 @@ const handlePlantsClick = (e) => {
 
         </div>
  ) :  (
-    <CartItem onContinueShopping={handleContinueShopping}/>
+    <CartItem onContinueShopping={() => handleContinueShopping}/>
 )}
     </div>
     );
